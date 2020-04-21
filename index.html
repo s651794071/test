@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <style media="screen" type="text/css">
+      body{
+        background:#93eceb;
+        height:1000px;
+        animation:myfirst 5s;
+        -webkit-animation:myfirst 5s; /* Safari and Chrome */
+
+      }
+      @keyframes myfirst
+{
+	from {background:#e6f5a8;}
+	to {background:#93eceb;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+	from {background:#eee;}
+	to {background:#56a753;}
+}
+
+      .center{
+        text-align: center;
+        line-height:500px;
+      }
+    </style>
+    <script type="text/javascript">
+      function openWindow()
+{
+    var OpenOrNot = confirm("是否打开新的页面");
+    if (OpenOrNot == true)
+    {
+        var url = prompt("请输入网址")
+        if(!url){
+            url = 'http：//www.imooc.com/'
+        }
+
+
+        window.open(url,'_blank','width=400, height=500, menubar=no, toolbar=no')
+    }
+}
+
+
+    </script>
+  </head>
+  <body>
+    <div class="center">
+      <input type="text" name="code" placeholder='"请输入暗号暗号"'>
+    </div>
+    <input type="button" value="新窗口打开网站" onclick="openWindow()" />
+
+  </body>
+</html>
